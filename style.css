@@ -1,0 +1,137 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 35px 15px;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #25243a;
+    background: linear-gradient(135deg, #eeeaff, #f8f9ff);
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(45, 35, 100, 0.12);
+}
+
+h1 {
+    margin-bottom: 8px;
+    text-align: center;
+    color: #5b45d6;
+}
+
+.subtitle {
+    margin-bottom: 28px;
+    text-align: center;
+    color: #77758a;
+}
+
+#todo-form {
+    display: flex;
+    gap: 10px;
+}
+
+#task-input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #ddd9ee;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #6554d9;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4e3dc1;
+}
+
+.task-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #77758a;
+}
+
+#clear-completed {
+    padding: 8px 10px;
+    background: #eeeaff;
+    color: #5544c5;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 18px;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 1px solid #eeeaf7;
+    border-radius: 8px;
+}
+
+#task-list li span {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+#task-list li.completed span {
+    color: #999;
+    text-decoration: line-through;
+}
+
+#task-list li input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: #6554d9;
+}
+
+#task-list li .delete-btn {
+    padding: 7px 10px;
+    background: #ffe9e9;
+    color: #c73535;
+}
+
+#empty-message {
+    text-align: center;
+    color: #9290a3;
+    padding: 15px 0;
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 10px auto;
+        padding: 20px 15px;
+    }
+
+    #todo-form {
+        flex-direction: column;
+    }
+
+    .task-info {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
